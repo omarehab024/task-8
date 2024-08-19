@@ -1,0 +1,69 @@
+setTimeout
+تُستخدم لتشغيل دالة مرة واحدة بعد فترة زمنية محددة.
+
+الصيغة:
+
+JavaScript
+
+let timerId = setTimeout(func, delay, ...args);
+AI-generated code. Review and use carefully. More info on FAQ.
+func: الدالة التي سيتم تنفيذها.
+delay: التأخير قبل بدء التنفيذ بالملي ثانية (1000 ملي ثانية = ثانية واحدة).
+args: الوسائط التي سيتم تمريرها إلى الدالة.
+مثال:
+
+JavaScript
+
+setTimeout(() => {
+    console.log('Hello, world!');
+}, 2000); // سيتم تنفيذ الدالة بعد 2 ثانية
+AI-generated code. Review and use carefully. More info on FAQ.
+2. setInterval
+تُستخدم لتشغيل دالة بشكل متكرر بعد فترة زمنية محددة.
+
+الصيغة:
+
+JavaScript
+
+let timerId = setInterval(func, delay, ...args);
+AI-generated code. Review and use carefully. More info on FAQ.
+func: الدالة التي سيتم تنفيذها.
+delay: التأخير بين كل تنفيذ بالملي ثانية.
+args: الوسائط التي سيتم تمريرها إلى الدالة.
+مثال:
+
+JavaScript
+
+setInterval(() => {
+    console.log('Hello, world!');
+}, 1000); // سيتم تنفيذ الدالة كل 1 ثانية
+AI-generated code. Review and use carefully. More info on FAQ.
+3. إيقاف المؤقت
+يمكنك إيقاف تنفيذ المؤقت باستخدام clearTimeout أو clearInterval مع المعرف الذي تم إرجاعه عند إنشاء المؤقت.
+
+مثال لإيقاف setTimeout:
+
+JavaScript
+
+let timerId = setTimeout(() => {
+    console.log('This will not run');
+}, 5000);
+
+clearTimeout(timerId); // إيقاف المؤقت قبل تنفيذه
+AI-generated code. Review and use carefully. More info on FAQ.
+مثال لإيقاف setInterval:
+
+JavaScript
+
+let timerId = setInterval(() => {
+    console.log('This will run every second');
+}, 1000);
+
+clearInterval(timerId); // إيقاف المؤقت بعد فترة
+AI-generated code. Review and use carefully. More info on FAQ.
+استخدامات المؤقتات
+إظهار مؤثرات بصرية.
+عرض الوقت الحالي.
+الحفظ التلقائي للمحتوى.
+تأخير ظهور الإعلانات.
+تحديث البيانات بشكل دوري.
